@@ -1,18 +1,29 @@
 - name: kuberlab
   charts:
-    - name: elastic
-      src: dev.kuberlab.io/kuberlab/elastic
-      version: ^1.2.5
+    - name: demo-web-server
+      src: https://github.com/kuberlab/demo-web-server/Chart
+      #src: https://dev.kuberlab.io/kuberlab/demo-web-server
+      version: "*"
       clusters:
-        - master
-        - slave
+        - master-test
       configuration:
-        file: reference to values
         values:
-          p1: test
-    - name: kuberlab
-      src: dev.kuberlab.io/kuberlab/kuberlab
+          Name: demo
+          Component: demo-server
+          ServerVersion: 1.2.0
+          Replicas: 1
+          CpuRequests: "25m"
+          MemoryRequests: "64Mi"
+          CpuLimits: "200m"
+          MemoryLimits: "64Mi"
+          Image:
+            kuberlab.io/image:
+              Name: kuberlab/demo-web-server
+              CandidateTag: "*"
+- name: wordpress
+  charts:
+    - name: wordpress
+      src: https://dev.kuberlab.io/kuberlab/wordpress
+      version: "*"
       clusters:
-        - master
-      configuration:
-        file: reference to values
+        - master-test

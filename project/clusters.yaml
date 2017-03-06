@@ -1,4 +1,9 @@
-- Account: seventh-seeker-155107
-  Name: mybl1
+- Account: testcluster-158807 ##Accout name that will be use to connect to cloud provider
+  Name: master-test ##Cluster name
+  Provider: google ##Name of provicer
+  Src: master-test.yaml ##Cluster resource description
+- Account: testcluster-158807
+  Name: test1
   Provider: google
-  Src: mybl1.yaml
+  Src: test1.yaml
+  Status: Undefined

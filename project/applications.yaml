@@ -67,3 +67,11 @@
     src: https://github.com/iljapoletaev/ku_test/chart
     version: 0.2.0
   name: sdfsdfsdf
+- charts:
+  - clusters:
+    - test1
+    configuration: {}
+    name: test
+    src: https://github.com/iljapoletaev/ku_test/chart
+    version: 0.2.0
+  name: kjh

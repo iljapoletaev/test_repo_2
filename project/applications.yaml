@@ -106,4 +106,10 @@
     name: test
     src: https://github.com/iljapoletaev/ku_test/chart
     version: 0.2.0
+  - clusters:
+    - master-test
+    configuration: {}
+    name: test
+    src: https://github.com/iljapoletaev/ku_test/chart
+    version: 0.2.0
   name: asdasd
